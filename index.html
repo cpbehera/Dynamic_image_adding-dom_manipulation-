@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Element</title>
+    <style>
+        *{
+            text-align: center;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+        }
+      h1 {
+        color: #108810;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="main">
+      <h1>Geekster</h1>
+      <h4>Click on the button to add image element</h4>
+      <button onclick="addImage()">click here</button>
+    </div>
+
+    <script>
+        var main = document.getElementById("main");
+        var h3 = document.createElement("h3");
+        var headingText = document.createTextNode("Image Element Added");
+        h3.appendChild(headingText);
+        h3.style.color = "#008010";
+        var image = document.createElement("img");
+        image.src = "geekster.png";
+
+        function addImage(){
+            main.appendChild(h3);
+            main.appendChild(image);
+        }
+    </script>
+  </body>
+</html>
